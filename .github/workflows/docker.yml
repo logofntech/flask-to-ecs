@@ -24,14 +24,6 @@ jobs:
       - name: Run tests
         run: python app/tests.py
 
-  lint:
-    name: Run linter for dockerfile(Hadolint)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Hadolint linting
-        uses: brpaz/hadolint-action@master
-
   build-push:
     name: Build and push
     runs-on: ubuntu-latest
